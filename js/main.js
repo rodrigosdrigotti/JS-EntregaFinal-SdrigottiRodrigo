@@ -244,19 +244,6 @@ function pedirFecha() {
     }
 }
 
-/* function pedirPagina(url) {
-    fetch(url)
-        .then((page) => {
-            return page.text();
-        })
-        .then((pagina) => {
-            document.querySelector(".pantalla").innerHTML = pagina;
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-} */
-
 let opcion = document.getElementById("btnOpcion");
 opcion.addEventListener("click", (e)=> {
     e.preventDefault();
@@ -333,8 +320,6 @@ opcion.addEventListener("click", (e)=> {
             break;
         case "8":
             window.location.href = "pages/conversor.html";
-            /* const url = "pages/conversor.html";
-            pedirPagina(url); */
             break;
         case "9":
             window.location.href = "pages/salir.html";
