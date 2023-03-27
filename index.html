@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tituloCaja">
+          <div class="titulo">
+            <p>Cajero Automatico</p>
+          </div>
+        </div>
+        <div class="cajaPantalla">
+            <div class="bordePantalla">
+                <div class="pantalla" id="userInfo">
+                    <div class="grid" id="gridLogin">
+                      <form action="" method="post" class="form login" id="formLogin">
+                        <div class="form__field">
+                          <label for="login__username"><i class="fa-solid fa-user"></i>
+                          <span class="hidden">Username</span></label>
+                          <input autocomplete="username" id="loginNombre" type="text" name="username" class="form__input" placeholder="Usuario" required>
+                        </div>
+                        <div class="form__field">
+                          <label for="login__password"><i class="fa-solid fa-lock"></i>
+                          <span class="hidden">Password</span></label>
+                          <input id="loginPass" type="password" name="password" class="form__input" placeholder="Contraseña" required>
+                        </div>
+                        <div class="form__field">
+                          <input type="submit" value="Iniciar Sesion">
+                        </div>
+                      </form>
+                      <p class="text--center">Usuario / Clave = Local Storage<!-- <a href="#">Registrate</a> --></p>
+                    </div>
+                    <div class="usuario">
+                        <p id="usuario"></p>
+                    </div>
+                    <div id="busquedaFechaDescripcion"></div>
+                    <div id="prompt-form-container">
+                      <form id="prompt-form">
+                        <input class="inputOp" name="text" placeholder="Ingrese el valor" autocomplete="off" type="text">
+                        <input class="botonOp" type="submit" value="Enviar">
+                        <input class="botonOp" type="button" name="cancel" value="Cancelar">
+                      </form>
+                    </div>
+                    <div class="botonPantalla" id="btnOpcion">
+                        <div class="botonesFila">
+                            <button class="btnOpcion" value="1"></button>
+                            <label>Consulta de Saldo</label>
+                            <label>Retiro de Efectivo</label>
+                            <button class="btnOpcion" value="2"></button>
+                        </div>
+                        <div class="botonesFila">    
+                            <button class="btnOpcion" value="3"></button>
+                            <label>Deposito de Efectivo</label>
+                            <label>Ver todos los movimientos</label>
+                            <button class="btnOpcion" value="4"></button>
+                        </div>
+                        <div class="botonesFila">
+                            <button class="btnOpcion" value="5"></button>
+                            <label>Ver movimientos por Fecha</label>
+                            <label>Ver movimientos por Descripcion</label>
+                            <button class="btnOpcion" value="6"></button>
+                        </div>
+                        <div class="botonesFila">
+                            <button class="btnOpcion" value="7"></button>
+                            <label>Ver Datos</label>
+                            <label>Conversor de Monedas</label>
+                            <button class="btnOpcion" value="8"></button>
+                        </div>
+                        <div class="botonesFila">
+                            <label></label>
+                          <label>Salir</label>
+                          <button class="btnOpcion" value="9"></button>
+                      </div>
+                    </div>
+                    <div class="opciones">
+                        <p id="resultado"></p>
+                        <p id="resultado2"></p>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="tecladoCaja">
+          <div class="teclado">
+            <div class="numeros">
+              <div class="numero">
+                <p>1</p>
+              </div>
+              <div class="numero">
+                <p>2</p>
+              </div>
+              <div class="numero">
+                <p>3</p>
+              </div>
+              <div class="numero">
+                <p>4</p>
+              </div>
+              <div class="numero">
+                <p>5</p>
+              </div>
+              <div class="numero">
+                <p>6</p>
+              </div>
+              <div class="numero">
+                <p>7</p>
+              </div>
+              <div class="numero">
+                <p>8</p>
+              </div>
+              <div class="numero">
+                <p>9</p>
+              </div>
+              <div class="numero">
+                <p>*</p>
+              </div>
+              <div class="numero">
+                <p>0</p>
+              </div>
+              <div class="numero">
+                <p>#</p>
+              </div>
+            </div>
+            <div class="botones">
+              <div class="numeroBoton">
+                <p>Cancel</p>
+              </div>
+              <div class="numeroBoton">
+                <p>Borrar</p>
+              </div>
+              <div class="numeroBoton">
+                <p>Aceptar</p>
+              </div>
+              <div class="numeroBoton">
+                <p></p>
+              </div>
+            </div>
+            <div class="tarjeta">
+              <p>Ingrese Tarjeta</p>
+              <div class="ranuraBorde">
+                <div class="ranura"></div>
+              </div>
+              <p>Retire Dinero</p>
+              <div class="ranuraBillete">
+                <div class="ranura"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ticket">
+          <p>* Esperar que se borre el texto para hacer otra consulta. *</p>
+          <br>
+          <p id="listaMovimientos"></p>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
