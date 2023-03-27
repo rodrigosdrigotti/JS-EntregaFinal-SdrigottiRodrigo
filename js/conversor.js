@@ -5,6 +5,9 @@ const valorDos = document.querySelector("#valorDos");
 const cambio = document.querySelector("#cambio");
 const tasaIcon = document.querySelector("#tasa");
 
+document.addEventListener('DOMContentLoaded', ()=>{
+    convertirMoneda();
+})
 
 function convertirMoneda(){
     const opUno = monedaUno.value;
